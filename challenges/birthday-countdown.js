@@ -1,3 +1,19 @@
+//creat a function
+function daysUntilDate(dateString){
+  //convert string into date format
+  //today - "mm/dd/yyyy" returns a number format
+  var today = Date.now();
+  var inputDate = new Date(dateString).getTime();
+
+  let numOfMilliseconds = inputDate - today;
+  let seconds = numOfMilliseconds/1000;
+  let minutes = seconds/60;
+  let hours = minutes/60;
+  let days = hours/24;
+  return Math.ceil(days);
+}
+
+console.log(daysUntilDate("03/14/2018"));
 /*
 
   Create a function `daysUntilDate` that accepts a string (with the format `"mm/dd/yyyy"`) and

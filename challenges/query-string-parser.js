@@ -1,3 +1,20 @@
+function parseQueryString(qString){
+  let obj = {};
+  //code to manipute qString to be put into object "obj
+
+  let ampersand = qString.split("&");
+  ampersand.forEach(function(element){
+    let arr = element.split("=");
+    obj[arr[0]]=arr[1];
+  })
+
+  return obj;
+
+}
+
+let queryString= parseQueryString("first=alpha&last=omega");
+
+console.log(queryString);
 /*
 
   Create a function `parseQueryString` that accepts a query string parameter as an argument, and
