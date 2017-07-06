@@ -13,6 +13,7 @@ let friendsArray = [
 //getNextBirthday function
 function getNextBirthday(string){ //input is dob 03/14/1989
   //get current year birthday
+  let today = Date.now();
   let arr = string.split("/");
   //change year to current year (2017)
   arr[2] = new Date().getFullYear();
