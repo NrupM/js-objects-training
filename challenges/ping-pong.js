@@ -38,3 +38,4 @@
 */
 
 // YOUR CODE HERE
+var table = [{steps: 0}, null, null, null];

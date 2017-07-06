@@ -1,10 +1,19 @@
-var fruits = ["apple", "banana", "orange"];
+//make a function that splits the letter characters
+function letterCount(string){
+  let countedLetters = {};
+  let splitString = string.split("");
+  splitString.forEach(function makeKeyValue(character){
+    countedLetters[character]
+    ?
+    countedLetters[character] += 1
+    :
+    countedLetters[character] = 1;
+  });
 
-var lettersCounted = fruits.map(function letterCount(fruits) {
-    //loop through array
-    //count the times letter occurs
-    //return number of times each letter occurs in the string
-    return fruits.split("");
-});
+  return countedLetters;
 
-console.log(lettersCounted);
+}
+console.log(letterCount("apple"));
+//created an array of letter strings
+
+//make a function  that iterates over the new array and puts that value as a key in our object
